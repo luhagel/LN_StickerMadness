@@ -8,9 +8,24 @@
 
 import UIKit
 
-class StickerViewController: UIViewController {
+class StickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBAction func photoButtonTapped(sender: AnyObject) {
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .Camera
+                imagePicker.cameraCaptureMode = .Photo
+                presentViewController(imagePicker, animated: true, completion: {})
+            } else {
+                print("Application cannot access the camera.")
+            }
+        } else {
+            print("Application cannot access the camera.")
+        }
+    }
     
     @IBAction func mustacheButtonTapped(sender: UIButton) {
         self.addSticker("Mustache")
@@ -25,10 +40,12 @@ class StickerViewController: UIViewController {
     }
     
     var bgImage: UIImage!
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imagePicker.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -57,6 +74,28 @@ class StickerViewController: UIViewController {
         }
         
         view.addSubview(imageView)
+    }
+    
+    //MARK: Delegates
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print("Got an image")
+        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
+            bgImage = pickedImage
+        }
+        imagePicker.dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user saves an image
+            print("image taken")
+            self.backgroundImageView.image = self.bgImage
+
+        })
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        print("User canceled image")
+        dismissViewControllerAnimated(true, completion: {
+            // Anything you want to happen when the user selects cancel
+        })
     }
     
 
