@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		81CB3AAF1D22F049000A96BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AAE1D22F049000A96BA /* AppDelegate.swift */; };
-		81CB3AB11D22F049000A96BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AB01D22F049000A96BA /* ViewController.swift */; };
 		81CB3AB41D22F049000A96BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CB3AB21D22F049000A96BA /* Main.storyboard */; };
 		81CB3AB61D22F049000A96BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CB3AB51D22F049000A96BA /* Assets.xcassets */; };
 		81CB3AB91D22F049000A96BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CB3AB71D22F049000A96BA /* LaunchScreen.storyboard */; };
+		81CB3AC11D22F305000A96BA /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AC01D22F305000A96BA /* StickerViewController.swift */; };
+		81CB3AC31D22F6E0000A96BA /* Mustache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AC21D22F6E0000A96BA /* Mustache.swift */; };
+		81CB3AC51D22FA88000A96BA /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AC41D22FA88000A96BA /* Hat.swift */; };
+		81CB3AC71D22FAD4000A96BA /* Glasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AC61D22FAD4000A96BA /* Glasses.swift */; };
+		81CB3AC91D22FEA7000A96BA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB3AC81D22FEA7000A96BA /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81CB3AAB1D22F049000A96BA /* StickerMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CB3AAE1D22F049000A96BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81CB3AB01D22F049000A96BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81CB3AB31D22F049000A96BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81CB3AB51D22F049000A96BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81CB3AB81D22F049000A96BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81CB3ABA1D22F049000A96BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81CB3AC01D22F305000A96BA /* StickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerViewController.swift; sourceTree = "<group>"; };
+		81CB3AC21D22F6E0000A96BA /* Mustache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mustache.swift; sourceTree = "<group>"; };
+		81CB3AC41D22FA88000A96BA /* Hat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hat.swift; sourceTree = "<group>"; };
+		81CB3AC61D22FAD4000A96BA /* Glasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glasses.swift; sourceTree = "<group>"; };
+		81CB3AC81D22FEA7000A96BA /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				81CB3AAE1D22F049000A96BA /* AppDelegate.swift */,
-				81CB3AB01D22F049000A96BA /* ViewController.swift */,
 				81CB3AB21D22F049000A96BA /* Main.storyboard */,
 				81CB3AB51D22F049000A96BA /* Assets.xcassets */,
 				81CB3AB71D22F049000A96BA /* LaunchScreen.storyboard */,
+				81CB3AC21D22F6E0000A96BA /* Mustache.swift */,
 				81CB3ABA1D22F049000A96BA /* Info.plist */,
+				81CB3AC41D22FA88000A96BA /* Hat.swift */,
+				81CB3AC61D22FAD4000A96BA /* Glasses.swift */,
+				81CB3AC01D22F305000A96BA /* StickerViewController.swift */,
+				81CB3AC81D22FEA7000A96BA /* PhotoViewController.swift */,
 			);
 			path = StickerMadness;
 			sourceTree = "<group>";
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81CB3AB11D22F049000A96BA /* ViewController.swift in Sources */,
+				81CB3AC11D22F305000A96BA /* StickerViewController.swift in Sources */,
+				81CB3AC51D22FA88000A96BA /* Hat.swift in Sources */,
 				81CB3AAF1D22F049000A96BA /* AppDelegate.swift in Sources */,
+				81CB3AC31D22F6E0000A96BA /* Mustache.swift in Sources */,
+				81CB3AC71D22FAD4000A96BA /* Glasses.swift in Sources */,
+				81CB3AC91D22FEA7000A96BA /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

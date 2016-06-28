@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sticker View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Sticker View Controller" customClass="StickerViewController" customModule="StickerMadness" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="csu-ya-Ew5">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDJ-aE-81i">
+                                <rect key="frame" x="265" y="532" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="cFq-bV-FxD"/>
+                                </constraints>
+                                <state key="normal" title="Hat"/>
+                                <connections>
+                                    <action selector="hatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jc2-Rg-3Uk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ct-l7-LZN">
+                                <rect key="frame" x="510" y="532" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="sld-Sa-FBI"/>
+                                </constraints>
+                                <state key="normal" title="Glasses"/>
+                                <connections>
+                                    <action selector="glassesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iqi-ER-wyD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-wD-Qzo">
+                                <rect key="frame" x="20" y="532" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="XaP-D6-hjQ"/>
+                                </constraints>
+                                <state key="normal" title="Mustache"/>
+                                <connections>
+                                    <action selector="mustacheButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVC-5k-oie"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mDJ-aE-81i" firstAttribute="baseline" secondItem="2ct-l7-LZN" secondAttribute="baseline" id="7l6-Cc-krh"/>
+                            <constraint firstItem="vVD-wD-Qzo" firstAttribute="baseline" secondItem="mDJ-aE-81i" secondAttribute="baseline" id="CaC-b3-t13"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vVD-wD-Qzo" secondAttribute="bottom" constant="38" id="FHt-pG-wpn"/>
+                            <constraint firstItem="vVD-wD-Qzo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UCu-51-Ui2"/>
+                            <constraint firstItem="2ct-l7-LZN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WRH-qZ-bph"/>
+                            <constraint firstAttribute="trailing" secondItem="csu-ya-Ew5" secondAttribute="trailing" id="ce9-AO-KLe"/>
+                            <constraint firstItem="mDJ-aE-81i" firstAttribute="centerX" secondItem="csu-ya-Ew5" secondAttribute="centerX" id="h8i-BC-JYh"/>
+                            <constraint firstItem="csu-ya-Ew5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hUF-KO-kbg"/>
+                            <constraint firstItem="csu-ya-Ew5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pbh-jA-XQQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="csu-ya-Ew5" secondAttribute="bottom" id="y3F-AO-9oh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="csu-ya-Ew5" id="iwu-W0-zUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="401" y="359"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="lhz-h8-JyJ">
+            <objects>
+                <viewController id="jQ6-s0-HmW" customClass="PhotoViewController" customModule="StickerMadness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kN1-Ga-6DB"/>
+                        <viewControllerLayoutGuide type="bottom" id="hMi-56-8P3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a2T-hu-6bv" customClass="CameraViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joV-c8-PIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="1018"/>
         </scene>
     </scenes>
 </document>
