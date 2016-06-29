@@ -57,12 +57,13 @@
                                     <action selector="mustacheButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVC-5k-oie"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgR-AI-j7E">
-                                <rect key="frame" x="251" y="41" width="98" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgR-AI-j7E">
+                                <rect key="frame" x="272" y="28" width="56" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="98" id="2ug-pk-wMs"/>
+                                    <constraint firstAttribute="height" constant="56" id="ZAx-vc-S4x"/>
+                                    <constraint firstAttribute="width" constant="56" id="wUJ-Pi-5Mz"/>
                                 </constraints>
-                                <state key="normal" title="Take Photo">
+                                <state key="normal" image="camera-icon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -79,14 +80,14 @@
                             <constraint firstItem="mDJ-aE-81i" firstAttribute="baseline" secondItem="2ct-l7-LZN" secondAttribute="baseline" id="5vh-58-PIM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vVD-wD-Qzo" secondAttribute="bottom" constant="38" id="Dmh-dL-EOz"/>
                             <constraint firstItem="csu-ya-Ew5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qep-FW-49N"/>
+                            <constraint firstItem="QgR-AI-j7E" firstAttribute="centerX" secondItem="csu-ya-Ew5" secondAttribute="centerX" id="Sho-zq-glJ"/>
+                            <constraint firstItem="QgR-AI-j7E" firstAttribute="centerX" secondItem="mDJ-aE-81i" secondAttribute="centerX" id="dPC-Mx-4VS"/>
                             <constraint firstItem="csu-ya-Ew5" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="dpS-c8-MMa"/>
-                            <constraint firstItem="csu-ya-Ew5" firstAttribute="centerX" secondItem="QgR-AI-j7E" secondAttribute="centerX" id="gZQ-BI-3SP"/>
                             <constraint firstItem="vVD-wD-Qzo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kgU-2v-zVm"/>
                             <constraint firstItem="2ct-l7-LZN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lxZ-ES-Jzg"/>
                             <constraint firstItem="vVD-wD-Qzo" firstAttribute="baseline" secondItem="mDJ-aE-81i" secondAttribute="baseline" id="rH8-Lw-aQG"/>
-                            <constraint firstItem="QgR-AI-j7E" firstAttribute="centerX" secondItem="mDJ-aE-81i" secondAttribute="centerX" id="uI0-Qd-TF5"/>
                             <constraint firstItem="csu-ya-Ew5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vTn-Sv-4LG"/>
-                            <constraint firstItem="QgR-AI-j7E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="vW2-f6-RrK"/>
+                            <constraint firstItem="QgR-AI-j7E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="vZ6-UP-Ugs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,4 +99,7 @@
             <point key="canvasLocation" x="663" y="1075"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera-icon" width="512" height="512"/>
+    </resources>
 </document>
