@@ -8,17 +8,10 @@
 
 import UIKit
 
-class Hat: UIImageView {
-    var height: Int
-    var width: Int
-    let sticker: UIImage
-    
+class Hat: Sticker {
+
     init(){
-        height = 100
-        width = 100
-        sticker = UIImage(named: "hat1.png")!
-        super.init(image: sticker)
-        self.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        super.init(height: 200, width: 300, imageName: "hat1.png")
     }
     
     required init?(coder aDecoder: NSCoder) {
