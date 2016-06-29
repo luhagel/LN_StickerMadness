@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StickerMadness/Sticker.swift"
-            timestampString = "488915894.791853"
+            timestampString = "488917230.071638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "handleRotation(_:)"
             landmarkType = "5">
          </BreakpointContent>
