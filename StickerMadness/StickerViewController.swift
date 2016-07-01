@@ -27,15 +27,15 @@ class StickerViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
-    @IBAction func mustacheButtonTapped(sender: UIButton) {
+    @IBAction func mustacheButtonTapped(sender: AnyObject) {
         self.addSticker("Mustache")
     }
     
-    @IBAction func hatButtonTapped(sender: UIButton) {
+    @IBAction func hatButtonTapped(sender: AnyObject) {
         self.addSticker("hat")
     }
     
-    @IBAction func glassesButtonTapped(sender: UIButton) {
+    @IBAction func glassesButtonTapped(sender: AnyObject) {
         self.addSticker("eyeglasses")
     }
     

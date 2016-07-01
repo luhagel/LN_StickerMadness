@@ -19,6 +19,7 @@ class Sticker: UIImageView, UIGestureRecognizerDelegate {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(_:)))
         let rotate = UIRotationGestureRecognizer(target: self, action: #selector(self.handleRotation(_:)))
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(self.handlePinch(_:)))
+        let lPress = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLPress(_:)))
         
         self.userInteractionEnabled = true
         self.frame = CGRect(x: 100, y: 100, width: width, height: height)
@@ -28,6 +29,8 @@ class Sticker: UIImageView, UIGestureRecognizerDelegate {
         rotate.delegate = self
         self.addGestureRecognizer(pinch)
         pinch.delegate = self
+        self.addGestureRecognizer(lPress)
+        lPress.delegate = self
     }
     
     func handlePan(panGestureRecognizer: UIPanGestureRecognizer!) {
@@ -51,6 +54,12 @@ class Sticker: UIImageView, UIGestureRecognizerDelegate {
     func handlePinch(pinchGestureRecognizer: UIPinchGestureRecognizer!) {
         pinchGestureRecognizer.view!.transform = CGAffineTransformScale(pinchGestureRecognizer.view!.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale)
         pinchGestureRecognizer.scale = 1
+    }
+    
+    func handleLPress(lPressGestureRecognizer: UILongPressGestureRecognizer) {
+        if let view = lPressGestureRecognizer.view {
+            view.removeFromSuperview()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
